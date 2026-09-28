@@ -1,0 +1,71 @@
+{
+  "symbol": "AAPL",
+  "split": "test",
+  "log_likelihood": 6459.717619492454,
+  "n_components": 3,
+  "regime_distribution": {
+    "Bullish": 653,
+    "Bearish": 173,
+    "Sideways": 25
+  },
+  "log_likelihood_advanced": {
+    "total_log_likelihood": 6459.717619492454,
+    "log_likelihood_per_sample": 7.590737508216749,
+    "aic": -12873.435238984908,
+    "bic": -12764.26776002772,
+    "n_params": 23,
+    "n_samples": 851
+  },
+  "tail_risk": {
+    "tail_percentile": 5.0,
+    "lower_threshold_return": -0.0114919678484254,
+    "upper_threshold_return": 0.01199009251924384,
+    "left_tail": {
+      "n_events": 43,
+      "bearish_detected": 21,
+      "detection_rate": 0.4883720930232558,
+      "regime_distribution": {
+        "Bullish": 15,
+        "Bearish": 21,
+        "Sideways": 7
+      }
+    },
+    "right_tail": {
+      "n_events": 43,
+      "bullish_detected": 13,
+      "detection_rate": 0.3023255813953488,
+      "regime_distribution": {
+        "Bullish": 13,
+        "Bearish": 24,
+        "Sideways": 6
+      }
+    },
+    "overall_tail_detection_rate": 0.3953488372093023
+  },
+  "regime_stability": {
+    "transition_matrix": [
+      [
+        0.9226765570971904,
+        0.06331486100731051,
+        0.014008581895498999
+      ],
+      [
+        0.024529521383757105,
+        0.9754704261155721,
+        5.250067068541834e-08
+      ],
+      [
+        0.11801910022998062,
+        7.154590622069117e-08,
+        0.8819808282241132
+      ]
+    ],
+    "regime_persistence": [
+      0.9226765570971904,
+      0.9754704261155721,
+      0.8819808282241132
+    ],
+    "avg_persistence": 0.9267092704789586,
+    "min_persistence": 0.8819808282241132
+  }
+}

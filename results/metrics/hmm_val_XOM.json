@@ -1,0 +1,70 @@
+{
+  "symbol": "XOM",
+  "split": "val",
+  "log_likelihood": 2920.3015712465212,
+  "n_components": 3,
+  "regime_distribution": {
+    "Bearish": 378,
+    "Sideways": 44
+  },
+  "log_likelihood_advanced": {
+    "total_log_likelihood": 2920.3015712465212,
+    "log_likelihood_per_sample": 6.920145903427775,
+    "aic": -5794.6031424930425,
+    "bic": -5701.568020270214,
+    "n_params": 23,
+    "n_samples": 422
+  },
+  "tail_risk": {
+    "tail_percentile": 5.0,
+    "lower_threshold_return": -0.01237305562335078,
+    "upper_threshold_return": 0.01766395972332385,
+    "left_tail": {
+      "n_events": 22,
+      "bearish_detected": 12,
+      "detection_rate": 0.5454545454545454,
+      "regime_distribution": {
+        "Bullish": 0,
+        "Bearish": 12,
+        "Sideways": 10
+      }
+    },
+    "right_tail": {
+      "n_events": 22,
+      "bullish_detected": 0,
+      "detection_rate": 0.0,
+      "regime_distribution": {
+        "Bullish": 0,
+        "Bearish": 20,
+        "Sideways": 2
+      }
+    },
+    "overall_tail_detection_rate": 0.2727272727272727
+  },
+  "regime_stability": {
+    "transition_matrix": [
+      [
+        0.9798122163610173,
+        0.0201877836389826,
+        8.399715231146286e-23
+      ],
+      [
+        0.051887577187936525,
+        0.9391293560906184,
+        0.008983066721445096
+      ],
+      [
+        2.3218155290462085e-60,
+        0.03635403763004222,
+        0.9636459623699577
+      ]
+    ],
+    "regime_persistence": [
+      0.9798122163610173,
+      0.9391293560906184,
+      0.9636459623699577
+    ],
+    "avg_persistence": 0.9608625116071977,
+    "min_persistence": 0.9391293560906184
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "total_return": 0.04907490304010731,
+  "annualized_return": 0.0150448607860183,
+  "sharpe_ratio": 0.22469403068397287,
+  "sortino_ratio": 0.238215667694073,
+  "max_drawdown": 0.11983652293721099,
+  "max_dd_duration_days": 63,
+  "calmar_ratio": 0.12554486029649353,
+  "expectancy": 8.446469630619957e-05,
+  "profit_factor": 1.068310094557195,
+  "win_rate": 0.5195936139332366,
+  "avg_win": 0.0025422824013983402,
+  "avg_loss": -0.0025738396493825808,
+  "risk_reward_ratio": 0.9877353955030695,
+  "n_winning_days": 358,
+  "n_losing_days": 331,
+  "n_active_days": 689,
+  "n_trading_days": 821,
+  "active_ratio": 0.8392204628501827,
+  "underwater_pct": 83.81995133819952,
+  "final_value": 104907.49030401073,
+  "direction": {
+    "Buy": "1.5%",
+    "Hold": "95.7%",
+    "Sell": "2.8%"
+  },
+  "allocation_mean": 0.42788865400212145,
+  "allocation_std": 0.25120481450506604
+}

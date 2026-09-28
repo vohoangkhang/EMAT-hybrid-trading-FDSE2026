@@ -1,0 +1,462 @@
+{
+  "Buy & Hold": {
+    "AAPL": {
+      "total_return": 0.6719868517913163,
+      "sharpe_ratio": 0.6916534860808369,
+      "max_drawdown": 0.3336052192612386,
+      "calmar_ratio": 0.4897123473203268,
+      "final_value": 167198.68517913163,
+      "total_trades": 1,
+      "win_rate": 0.0
+    },
+    "MSFT": {
+      "total_return": 0.7740034295267594,
+      "sharpe_ratio": 0.8012929720993006,
+      "max_drawdown": 0.2683929103061947,
+      "calmar_ratio": 0.6849386903352279,
+      "final_value": 177400.34295267594,
+      "total_trades": 1,
+      "win_rate": 0.0
+    },
+    "JPM": {
+      "total_return": 2.0894911808570997,
+      "sharpe_ratio": 1.5219072562961815,
+      "max_drawdown": 0.2442392719298461,
+      "calmar_ratio": 1.612597637038329,
+      "final_value": 308949.11808571,
+      "total_trades": 1,
+      "win_rate": 0.0
+    },
+    "XOM": {
+      "total_return": 0.4985140301389125,
+      "sharpe_ratio": 0.6201201667212016,
+      "max_drawdown": 0.1891813801565762,
+      "calmar_ratio": 0.6684240967054268,
+      "final_value": 149851.40301389125,
+      "total_trades": 1,
+      "win_rate": 0.0
+    },
+    "VCB": {
+      "total_return": -0.025826909592175217,
+      "sharpe_ratio": 0.13152426536476944,
+      "max_drawdown": 0.460985609776355,
+      "calmar_ratio": -0.017331756974777568,
+      "final_value": 97417.30904078248,
+      "total_trades": 1,
+      "win_rate": 0.0
+    },
+    "HPG": {
+      "total_return": 1.3853256277823247,
+      "sharpe_ratio": 1.0235757252616406,
+      "max_drawdown": 0.2804054000120265,
+      "calmar_ratio": 1.0876400289595314,
+      "final_value": 238532.56277823247,
+      "total_trades": 1,
+      "win_rate": 0.0
+    },
+    "FPT": {
+      "total_return": 1.1330264916433903,
+      "sharpe_ratio": 1.0378810462410177,
+      "max_drawdown": 0.3459346587306153,
+      "calmar_ratio": 0.7546667904297977,
+      "final_value": 213302.64916433903,
+      "total_trades": 1,
+      "win_rate": 0.0
+    },
+    "GOOGL": {
+      "total_return": 1.6753486432314868,
+      "sharpe_ratio": 1.084206345309016,
+      "max_drawdown": 0.31659565684005603,
+      "calmar_ratio": 1.0613987520000758,
+      "final_value": 267534.8643231487,
+      "total_trades": 1,
+      "win_rate": 0.0
+    },
+    "META": {
+      "total_return": 2.119586730765485,
+      "sharpe_ratio": 1.349107166330944,
+      "max_drawdown": 0.3415081378425483,
+      "calmar_ratio": 1.5219037224687948,
+      "final_value": 311958.6730765485,
+      "total_trades": 1,
+      "win_rate": 0.0
+    },
+    "VNM": {
+      "total_return": 0.06042940570250765,
+      "sharpe_ratio": 0.3050307196817344,
+      "max_drawdown": 0.20844686648501368,
+      "calmar_ratio": 0.2232973000691243,
+      "final_value": 106042.94057025076,
+      "total_trades": 1,
+      "win_rate": 0.0
+    }
+  },
+  "Random": {
+    "AAPL": {
+      "total_return": 0.24247896463804675,
+      "sharpe_ratio": 0.6155245215825237,
+      "max_drawdown": 0.22918400086501375,
+      "calmar_ratio": 0.2879866134779786,
+      "final_value": 124247.89646380467,
+      "total_trades": 185,
+      "win_rate": 0.22162162162162163
+    },
+    "MSFT": {
+      "total_return": 0.30813697182848176,
+      "sharpe_ratio": 0.8184444118558042,
+      "max_drawdown": 0.1396777998476933,
+      "calmar_ratio": 0.5891092495933413,
+      "final_value": 130813.69718284818,
+      "total_trades": 185,
+      "win_rate": 0.21621621621621623
+    },
+    "JPM": {
+      "total_return": 0.5421216868998447,
+      "sharpe_ratio": 1.3245022761030738,
+      "max_drawdown": 0.10330332816029755,
+      "calmar_ratio": 1.3165717295162467,
+      "final_value": 154212.16868998448,
+      "total_trades": 185,
+      "win_rate": 0.22702702702702704
+    },
+    "XOM": {
+      "total_return": 0.35479186392137635,
+      "sharpe_ratio": 0.8767144247494123,
+      "max_drawdown": 0.1142683984961213,
+      "calmar_ratio": 0.8183263381967527,
+      "final_value": 135479.18639213764,
+      "total_trades": 185,
+      "win_rate": 0.22702702702702704
+    },
+    "VCB": {
+      "total_return": -0.08027747065184841,
+      "sharpe_ratio": -0.154468570604848,
+      "max_drawdown": 0.23076623558491416,
+      "calmar_ratio": -0.10975796616566927,
+      "final_value": 91972.25293481516,
+      "total_trades": 180,
+      "win_rate": 0.1388888888888889
+    },
+    "HPG": {
+      "total_return": 0.12801964975952754,
+      "sharpe_ratio": 0.32141016028767594,
+      "max_drawdown": 0.20675432835788748,
+      "calmar_ratio": 0.18173393608708985,
+      "final_value": 112801.96497595275,
+      "total_trades": 180,
+      "win_rate": 0.12777777777777777
+    },
+    "FPT": {
+      "total_return": 0.24574989675442893,
+      "sharpe_ratio": 0.5981579531957595,
+      "max_drawdown": 0.13583975641545437,
+      "calmar_ratio": 0.5123544760787789,
+      "final_value": 124574.98967544289,
+      "total_trades": 180,
+      "win_rate": 0.15
+    },
+    "GOOGL": {
+      "total_return": 0.47123353100453735,
+      "sharpe_ratio": 0.8843750832378152,
+      "max_drawdown": 0.18546328517034033,
+      "calmar_ratio": 0.6490614458376677,
+      "final_value": 147123.35310045374,
+      "total_trades": 185,
+      "win_rate": 0.20540540540540542
+    },
+    "META": {
+      "total_return": 0.6072205407700035,
+      "sharpe_ratio": 1.3495446435616025,
+      "max_drawdown": 0.1201573227522709,
+      "calmar_ratio": 1.5872992579405425,
+      "final_value": 160722.05407700036,
+      "total_trades": 145,
+      "win_rate": 0.18620689655172415
+    },
+    "VNM": {
+      "total_return": -0.1526583677330485,
+      "sharpe_ratio": -0.8133646122806317,
+      "max_drawdown": 0.1815140512224836,
+      "calmar_ratio": -0.6640628089962628,
+      "final_value": 84734.16322669515,
+      "total_trades": 73,
+      "win_rate": 0.1095890410958904
+    }
+  },
+  "SMA Cross (10/30)": {
+    "AAPL": {
+      "total_return": 0.18005710868471841,
+      "sharpe_ratio": 0.36159156496255573,
+      "max_drawdown": 0.27947668292796246,
+      "calmar_ratio": 0.17871906258028747,
+      "final_value": 118005.71086847184,
+      "total_trades": 32,
+      "win_rate": 0.21875
+    },
+    "MSFT": {
+      "total_return": 0.2541753988211554,
+      "sharpe_ratio": 0.4769109360444715,
+      "max_drawdown": 0.21590301313398497,
+      "calmar_ratio": 0.3193398123659111,
+      "final_value": 125417.53988211554,
+      "total_trades": 35,
+      "win_rate": 0.2
+    },
+    "JPM": {
+      "total_return": 0.5298697760547119,
+      "sharpe_ratio": 0.8109000787968261,
+      "max_drawdown": 0.1530132590553109,
+      "calmar_ratio": 0.8714392364907404,
+      "final_value": 152986.97760547118,
+      "total_trades": 33,
+      "win_rate": 0.18181818181818182
+    },
+    "XOM": {
+      "total_return": -0.11898683941351701,
+      "sharpe_ratio": -0.12449319515379687,
+      "max_drawdown": 0.305056769274096,
+      "calmar_ratio": -0.12000248521676679,
+      "final_value": 88101.3160586483,
+      "total_trades": 35,
+      "win_rate": 0.17142857142857143
+    },
+    "VCB": {
+      "total_return": -0.33066243764236963,
+      "sharpe_ratio": -0.41778380520749825,
+      "max_drawdown": 0.4459206038371158,
+      "calmar_ratio": -0.2596981980848217,
+      "final_value": 66933.75623576304,
+      "total_trades": 32,
+      "win_rate": 0.15625
+    },
+    "HPG": {
+      "total_return": 0.2591367823694939,
+      "sharpe_ratio": 0.4683809833158387,
+      "max_drawdown": 0.184129404958238,
+      "calmar_ratio": 0.3970277262913286,
+      "final_value": 125913.67823694939,
+      "total_trades": 36,
+      "win_rate": 0.16666666666666666
+    },
+    "FPT": {
+      "total_return": 0.6520433751170972,
+      "sharpe_ratio": 1.0215277875026858,
+      "max_drawdown": 0.19754016637163715,
+      "calmar_ratio": 0.8411363356527822,
+      "final_value": 165204.33751170972,
+      "total_trades": 24,
+      "win_rate": 0.125
+    },
+    "GOOGL": {
+      "total_return": 0.7657675280510855,
+      "sharpe_ratio": 0.7943235262985502,
+      "max_drawdown": 0.25582099268982916,
+      "calmar_ratio": 0.7122638637401093,
+      "final_value": 176576.75280510855,
+      "total_trades": 26,
+      "win_rate": 0.11538461538461539
+    },
+    "META": {
+      "total_return": 0.3692121060650342,
+      "sharpe_ratio": 0.5947653427619379,
+      "max_drawdown": 0.2568624178035268,
+      "calmar_ratio": 0.47709958114443374,
+      "final_value": 136921.21060650342,
+      "total_trades": 27,
+      "win_rate": 0.2962962962962963
+    },
+    "VNM": {
+      "total_return": -0.17204242704732592,
+      "sharpe_ratio": -0.6738666370330222,
+      "max_drawdown": 0.20684695544939713,
+      "calmar_ratio": -0.6583469490560758,
+      "final_value": 82795.75729526741,
+      "total_trades": 18,
+      "win_rate": 0.1111111111111111
+    }
+  },
+  "RSI (30/70)": {
+    "AAPL": {
+      "total_return": 0.3994792956046472,
+      "sharpe_ratio": 0.585849002577809,
+      "max_drawdown": 0.23375514379906565,
+      "calmar_ratio": 0.4449357099898878,
+      "final_value": 139947.92956046472,
+      "total_trades": 21,
+      "win_rate": 0.42857142857142855
+    },
+    "MSFT": {
+      "total_return": 0.2823647355395688,
+      "sharpe_ratio": 0.4953944543315328,
+      "max_drawdown": 0.20556597957015904,
+      "calmar_ratio": 0.36953652217177735,
+      "final_value": 128236.47355395688,
+      "total_trades": 19,
+      "win_rate": 0.47368421052631576
+    },
+    "JPM": {
+      "total_return": 0.38890244382010425,
+      "sharpe_ratio": 0.8178041953177304,
+      "max_drawdown": 0.14910268909990243,
+      "calmar_ratio": 0.6810279084829405,
+      "final_value": 138890.24438201042,
+      "total_trades": 16,
+      "win_rate": 0.4375
+    },
+    "XOM": {
+      "total_return": 0.5871943411659138,
+      "sharpe_ratio": 0.9571537210175204,
+      "max_drawdown": 0.13568234945627786,
+      "calmar_ratio": 1.0736972158926454,
+      "final_value": 158719.43411659138,
+      "total_trades": 19,
+      "win_rate": 0.42105263157894735
+    },
+    "VCB": {
+      "total_return": -0.19594720273151747,
+      "sharpe_ratio": -0.16423705394742288,
+      "max_drawdown": 0.400605484629075,
+      "calmar_ratio": -0.1614398417056973,
+      "final_value": 80405.27972684825,
+      "total_trades": 23,
+      "win_rate": 0.391304347826087
+    },
+    "HPG": {
+      "total_return": 0.035351896019439444,
+      "sharpe_ratio": 0.14825431300496036,
+      "max_drawdown": 0.2216628106279313,
+      "calmar_ratio": 0.04824660111349926,
+      "final_value": 103535.18960194394,
+      "total_trades": 13,
+      "win_rate": 0.23076923076923078
+    },
+    "FPT": {
+      "total_return": 0.13826600116939067,
+      "sharpe_ratio": 0.31039313575891175,
+      "max_drawdown": 0.27716638239446895,
+      "calmar_ratio": 0.1459450901577978,
+      "final_value": 113826.60011693907,
+      "total_trades": 19,
+      "win_rate": 0.3157894736842105
+    },
+    "GOOGL": {
+      "total_return": 0.4827553899500641,
+      "sharpe_ratio": 0.6941580679173164,
+      "max_drawdown": 0.24742915933081647,
+      "calmar_ratio": 0.4969220660557553,
+      "final_value": 148275.5389950064,
+      "total_trades": 19,
+      "win_rate": 0.42105263157894735
+    },
+    "META": {
+      "total_return": 0.373788019995192,
+      "sharpe_ratio": 0.6769476086760133,
+      "max_drawdown": 0.2799597263619322,
+      "calmar_ratio": 0.4426623654533323,
+      "final_value": 137378.8019995192,
+      "total_trades": 14,
+      "win_rate": 0.42857142857142855
+    },
+    "VNM": {
+      "total_return": -0.015179655156252556,
+      "sharpe_ratio": 0.020615973848282194,
+      "max_drawdown": 0.15391896186440676,
+      "calmar_ratio": -0.07660044665053758,
+      "final_value": 98482.03448437474,
+      "total_trades": 7,
+      "win_rate": 0.42857142857142855
+    }
+  },
+  "MACD (12/26/9)": {
+    "AAPL": {
+      "total_return": 0.09336116471777321,
+      "sharpe_ratio": 0.24180953156573165,
+      "max_drawdown": 0.21677277596332964,
+      "calmar_ratio": 0.12296882206198516,
+      "final_value": 109336.11647177732,
+      "total_trades": 74,
+      "win_rate": 0.0945945945945946
+    },
+    "MSFT": {
+      "total_return": -0.07049104279917184,
+      "sharpe_ratio": -0.03470006137691459,
+      "max_drawdown": 0.24124731979917619,
+      "calmar_ratio": -0.08835117871003971,
+      "final_value": 92950.89572008282,
+      "total_trades": 69,
+      "win_rate": 0.13043478260869565
+    },
+    "JPM": {
+      "total_return": 0.8588716176402589,
+      "sharpe_ratio": 1.2742280272572748,
+      "max_drawdown": 0.18485703604741432,
+      "calmar_ratio": 1.084555391151112,
+      "final_value": 185887.1617640259,
+      "total_trades": 63,
+      "win_rate": 0.07936507936507936
+    },
+    "XOM": {
+      "total_return": -0.11570255078724076,
+      "sharpe_ratio": -0.14653652318753782,
+      "max_drawdown": 0.29501347591305876,
+      "calmar_ratio": -0.12064707408681996,
+      "final_value": 88429.74492127592,
+      "total_trades": 73,
+      "win_rate": 0.0547945205479452
+    },
+    "VCB": {
+      "total_return": -0.5603030659911278,
+      "sharpe_ratio": -0.9708047499988569,
+      "max_drawdown": 0.6349263685713057,
+      "calmar_ratio": -0.3510879268562831,
+      "final_value": 43969.69340088722,
+      "total_trades": 65,
+      "win_rate": 0.07692307692307693
+    },
+    "HPG": {
+      "total_return": 0.2605213507554994,
+      "sharpe_ratio": 0.524383064318015,
+      "max_drawdown": 0.17595117820120199,
+      "calmar_ratio": 0.4180605040203046,
+      "final_value": 126052.13507554994,
+      "total_trades": 55,
+      "win_rate": 0.03636363636363636
+    },
+    "FPT": {
+      "total_return": 0.15590747383253314,
+      "sharpe_ratio": 0.36532829648930454,
+      "max_drawdown": 0.2464612965166175,
+      "calmar_ratio": 0.18428348829532584,
+      "final_value": 115590.74738325331,
+      "total_trades": 67,
+      "win_rate": 0.07462686567164178
+    },
+    "GOOGL": {
+      "total_return": 0.5105630879197666,
+      "sharpe_ratio": 0.654045154411198,
+      "max_drawdown": 0.20446026172292733,
+      "calmar_ratio": 0.632263108847421,
+      "final_value": 151056.30879197665,
+      "total_trades": 68,
+      "win_rate": 0.10294117647058823
+    },
+    "META": {
+      "total_return": 0.6707579985484903,
+      "sharpe_ratio": 0.93437174146857,
+      "max_drawdown": 0.17582427259117062,
+      "calmar_ratio": 1.1839344605657716,
+      "final_value": 167075.79985484903,
+      "total_trades": 49,
+      "win_rate": 0.08163265306122448
+    },
+    "VNM": {
+      "total_return": -0.0005334696722163062,
+      "sharpe_ratio": 0.09400579896967352,
+      "max_drawdown": 0.2096432593153129,
+      "calmar_ratio": -0.0019792930011943845,
+      "final_value": 99946.65303277837,
+      "total_trades": 20,
+      "win_rate": 0.05
+    }
+  }
+}

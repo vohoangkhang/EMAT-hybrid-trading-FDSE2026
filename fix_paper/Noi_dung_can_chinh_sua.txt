@@ -1,0 +1,28 @@
+1. Phân tích và loại bỏ từng thành phần:
+ EMAT, HMM, GARCH, FinBERT, CNN-GRU
+=> EMAT: các thành phần có ảnh hưởng/đóng góp gì? Cho ra cái gì? Loại bỏ từng cái để biết cái nào quan trọng.
+Tương tự cho HMM, GARCH...
+=> Chỉ ra cái nào ảnh hưởng chính, ảnh hưởng ra sao? Ví dụ:
+Model		RMSE	Profit	Win Rate
+EMAT Full	0.018	12.5%	87.2%
+HMM		0.022	9.1%	81%
+GARCH		0.21	9.8%	82%
+FineBERT	0.023	8.5%	79%
+CNN-GRU		0.028	6.3%	74%	
++ Method: giải quyết ntn?
+
+2. Without a clear chronological split => Chia ra 3 tập rõ ràng theo mốc thời gian để tránh data leakage.
+
+3. There is no clear reward function, policy optimization, or trading environment.
+Bài báo: Agent trong IT là gì? Ko có nói rõ.
++ Cách 1:
+Bổ sung: Actor, Status, Reward, hàm phạt...
++ Cách 2: đổi tên Agent thành Trading Decision Model (trong Kinh tế).
+
+4. The LSTM baseline: so sánh với những mô hình khác hiện nay.
+Nên so sánh với XGBoost..., Transformer.So sánh thêm với XGBoost (bên cạnh LSTM).
+
+5. properly benchmarked: đánh giá 1 cách công bằng theo 1 chuẩn/phương pháp đã được công nhận => Cần so sánh thêm. VD: Buy/Hold
+
+
+Bổ sung : giải thích dataset, mốc nào train,test,val. Lấy data từ đâu, quy trình chuẩn hoá. đồ thị. Thêm DA, F1, Sharpe Ratio,

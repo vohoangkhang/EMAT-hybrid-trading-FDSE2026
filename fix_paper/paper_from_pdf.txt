@@ -1,0 +1,635 @@
+=== PAGE 1 ===
+XXX-X-XXXX-XXXX-X/XX/$XX.00 ©20XX IEEEAn Integrated Multi-Aspect Learning Framework
+for Regime-Aware and Volatility-Sensitive Stock
+Abstract —The unpredictable volatility of financial markets
+makes forecasting and trading decision-making a significant
+challenge. Simple time-series models often fail to capture the
+transitions in market modes, variance risk, and the impact of
+crowd psychology. This study proposes a groundbreaking
+Multimodal Trading Agent framework that integrates Hidden
+Markov Models (HMMs) to identify market conditions,
+GARCH models to quantify volatility, and FinBERT to extract
+sentiment from over 165,000 bilingual financial news articles.
+This entire flow of features is integrated through a complex
+CNN-GRU network architecture combined with an Enhanced
+Multi-Aspect Attention Transformer (EMAT). Specifically, the
+system maps forecasts to a discrete action space, optimizing
+investment strategies. Empirical data were collected from 2019
+to 2026 on three representative stocks: META, GOOGL, and
+VNM. Through a backward logic mechanism and strict overlap
+analysis, the empirical results demonstrate that the system not
+only delivers impressive profit margins but also exhibits
+excellent risk hedging capabilities, successfully avoiding severe
+asset declines. This result confirms the immense potential of
+integrating mathematical statistics, natural language
+processing, and deep learning in modern financial systems.
+Keywords—Financial time series forecasting, Market regime
+detection, Volatility modeling, Sentiment analysis, Multi-action
+stocktrading
+I. I NTRODUCTION
+In the early stages, financial forecasting research primarily
+focused on enhancing traditional statistical models, such as
+ARIMA and GARCH, to improve the accuracy of price and
+volatility predictions[1], [2]. While SARIMA proved effective
+for seasonal data, it exhibited significant limitations in long-
+term forecasting [3] Although subsequent machine learning
+methods, such as Random Forest and XGBoost, improved the
+ability to learn non-linear relationships [4], [5], they still
+struggled to fully exploit the long-term sequential structure of
+financial time series, which is characterized by high noise and
+non-stationarity [6].
+The advent of deep learning, particularly Long Short-
+Term Memory (LSTM) networks, marked a major turning
+point due to its memory mechanism that enables learning
+long-term dependencies, demonstrating superior
+performance over traditional methods [7]. More recently, the
+Transformer architecture, with its self-attention mechanism,
+has further proven its advantage in processing complex
+structured data and supporting efficient parallel training.
+However, current pure Transformer models still rely
+predominantly on technical price data and do not fully reflect
+market behavioral and psychological factors [8], [9], [10].
+To address these limitations, integrating sentiment
+analysis from news via large language models like FinBERT
+has significantly improved forecasting accuracy, especially
+during periods of high market volatility[11], [12]. Current
+literature indicates a clear shift from single-model approaches
+toward hybrid, multi-model frameworks. Nevertheless,
+integrated systems capable of simultaneously addressing
+core aspects—including time-series forecasting, market
+regime identification, risk estimation, and crowd sentimentanalysis—within a unified decision-making system remain
+limited. This is the research gap that the EMAT trading agent
+framework aims to bridge to meet the complexities of modern
+stock markets.
+II. RELATED WORKS
+The period 2023–2025 marks a strong convergence of
+Deep Learning, Transformers, and Sentiment Analysis in
+financial forecasting. Regression networks, particularly
+LSTM, remain a crucial foundation, having proven superior
+to traditional statistical models in capturing long-term
+dependencies [7]. This performance is further enhanced
+when integrated with FinBERT sentiment scores, which
+significantly reduces error indices [13] and improves returns
+through intraday sentiment mining [14].
+Concurrently, the parallel processing capabilities and
+self-attention mechanisms of the Transformer architecture
+have opened a new era for financial forecasting. Studies
+demonstrate its superior capability in identifying price trends
+via CNN-Transformer hybrids [8], optimizing multi-asset
+strategies [15], and maintaining resilience during extreme
+market volatility through ensemble attention mechanisms
+[16].
+Despite advancements in LLM-based sentiment
+extraction [17], handling the non-stationary nature of markets
+and text data noise remains a critical challenge [18]. To
+address this, the latest research trend is shifting toward
+multimodal "trading agents" designed to directly make
+actionable decisions. While recent works have explored
+combinations like PPO reinforcement learning [19] or PSO
+with market sentiment [20] , most existing works still focus
+on single combinations. A clear gap remains in building a
+comprehensive trading agency system capable of
+simultaneously integrating hidden market conditions
+(HMM), volatility risk (GARCH), and multi-faceted news
+sentiment to make multi-action trading decisions. This is the
+driving force and solid theoretical basis for proposing the
+EMAT framework.
+III. METHODS
+Making trading decisions in the stock market is a highly
+complex problem, simultaneously influenced by time series
+dynamics, underlying market conditions, stochastic variance
+risk, and crowd psychology impulses. Instead of approaching
+the problem using the traditional binary (buy/sell) forecasting
+approach, which has shown many limitations in practice, this
+study redefines the problem as a multimodal trading agent
+system. Specifically, the expanded action space is designed to
+include seven advanced capital management commands:
+𝒜 = {Buy + + ,Buy + ,Hold, Hold (Risk),Wait,Sell − −
+,Exit} (1)
+The overall EMAT architecture is built on a hybrid
+superstructure, allowing for the integration of quantitative
+data streams (OHLCV series and 12 core technical indicators)
+and qualitative data streams (thousands of bilingual financial
+news articles) to map flexible and optimal trading decisions.
+Figure 1 below shows the proposed EMAT hybrid model for
+this study.
+
+=== PAGE 2 ===
+Fig. 1. Overall architecture of the EMAT hybrid system
+To ensure the integrity and reliability of input data, the
+study established a rigorous mathematical preprocessing
+procedure. The operating model is based on a fixed sliding
+window size of 10 days. This parameter selection stems from
+the empirical evidence showing that a 10-session cycle
+(equivalent to 2 working weeks) is the ideal timeframe to
+capture short-term momentum without being diluted by
+overly distant macroeconomic disturbances. The
+breakthrough in preprocessing is the "Weekend Backward
+Shift" mechanism. In traditional financial sentiment analysis
+models, information generated at the end of the week is often
+ignored or mechanically added to the Monday opening
+session, causing a delay in data reflection [21]. To overcome
+this, our algorithm handles the disruption between the market
+closing cycle (trading hours) and the 24/7 news flow by
+automatically aggregating all the emotional momentum from
+news generated on Saturday and Sunday, then shifting back
+to the time of the previous Friday according to the time series
+alignment logic [22]. This mechanism allows the system's
+state matrix to fully absorb the information "compression" at
+the last anchor point of the trading week, thereby accurately
+explaining the price jumps (gaps up/down) as soon as the
+Monday morning trading session opens. The entire testing
+process was also rigorously executed in real data overlap
+areas from 2020 to 2025 for META and GOOGL, and from
+2019 to 2025 for VNM, eliminating the risk of future
+information leakage (look-ahead bias).
+Fig. 2. Correlation matrix of input features of the modelIn the processing of quantitative data streams, financial
+time series always exhibit non-linearity, non-stationary
+properties, and extremely high noise levels. Recently, the
+Transformer deep learning architecture has demonstrated
+superiority in modeling long-term dependencies compared to
+traditional sequential regression networks [23]. To fully
+exploit this power, our study inherits and extends the
+Enhanced Multi-Aspect Attention Transformer (EMAT)
+network – a foundational architecture recently proposed by
+Chen et al. [24] for financial time series forecasting. The
+original EMAT framework is designed with a Multi-Aspect
+Attention Mechanism to simultaneously capture temporal
+decay, trend dynamics, and volatility regimes. From this
+foundation, our research develops EMAT into a multi-modal
+agency system by parallel-extracting price aspects and
+integrating them with macroeconomic data. The EMAT
+block is sophisticatedly structured with 6 stacked
+Transformer Encoder layers, where the input layer
+incorporates a Time2Vec embedding mechanism to help the
+model automatically learn the seasonality of financial data.
+Each Encoder layer operates through an 8-head Attention
+mechanism with a hidden dimension space of 256 units and
+a feed-forward neural network of 512 units. Notably, the use
+of the GeLU activation function instead of ReLU helps the
+model converge more smoothly in negative value regions.
+The attention matrix is ​ ​dynamically calculated based on the
+Query (Q), Key (K), and Value (V) vectors according to the
+underlying equation:
+Attention 𝑄,𝐾,𝑉 =softmax𝑄𝐾𝑇
+𝑑𝑘𝑉 (2)
+Besides price momentum signals, a core principle in
+empirical financial theory is that markets are always moving
+through different regimes, and the effectiveness of any
+strategy depends entirely on the current regime. The Hidden
+Markov Model (HMM) is the optimal probabilistic model
+for decoding these latent state variables [25]. In this study,
+the system loads a macro characteristic space including
+logarithmic returns, volume volatility, and price range (High-
+Low Spread) into the HMM model. Based on the probability
+matrix of state transitions, the HMM classifies the market
+into three distinct regimes: Bullish, Bearish, and Sideways.
+The output of the HMM block does not directly participate
+in price forecasting but serves as a contextual filter, helping
+the system determine whether to apply a trend-following or
+mean-reversion strategy.
+Fig. 3. Results of latent state classification using HMM model for GOOGL
+Fig. 4. Results of latent state classification using HMM model for META
+
+=== PAGE 3 ===
+Fig. 5. Results of latent state classification using the HMM model for
+VNM
+At the same time, to closely manage the "volatility
+clustering" phenomenon – a factor that directly leads to
+account shocks, research integrates the GARCH system
+(1,1). First introduced by Bollerslev [26], the Generalized
+Autoregressive Conditional Heteroskedasticity (GARCH)
+model is a natural generalization of the ARCH process,
+allowing the direct inclusion of past conditional variances
+into the current variance equation. This flexible lag structure
+creates an optimal statistical benchmark in forecasting the
+conditional variance risk of the market [27]. The model
+calculates volatility according to the equation:
+σ2
+t= α0+ α1ϵ2
+t−1+ β1σ2
+t−1(3)
+In this system, the coefficient α 1measures the sensitivity
+of the market to the latest shocks, while β 1represents the
+sustainability of past fluctuations. Based on the forecast
+variance σ2
+t, the system classifies the trading environment
+into three risk levels (Low, Medium, High Risk), creating an
+absolute quantitative basis for triggering defensive orders
+instead of relying on sentiment.
+To digitize crowd psychology, news texts are mapped
+into 768-dimensional embeddings via FinBERT[28].
+FinBERT takes news texts and transforms them into semantic
+embeddings in a 768-dimensional space. However, instead
+of directly using this result, the system deploys a complex
+Sentiment Hybrid block to filter information. Here, a 1D
+convolutional neural network (CNN) with a kernel size of 3
+and 256 filters is used to scan through the vector sequence.
+The kernel size of 3 allows the CNN to accurately extract
+three-word phrases (trigrams) carrying strong impulse
+signals such as "market crash" or "profit surge". This feature
+map is then passed through a bidirectional feedback network
+(BiGRU) with 128 units per direction (total output 256,
+Dropout rate 0.3) to connect the long sequence to the context,
+ultimately forming a highly sensitive Weighted Sentiment
+score vector.
+The final stage of the framework integrates state
+representation and decision-making through a unified fusion
+process. Latent representations generated by EMAT, HMM,
+GARCH, and the sentiment module are concatenated into a
+unified multidimensional state matrix. A secondary hybrid
+CNN–GRU block is then applied to capture cross-component
+correlations and regime transition patterns before forwarding
+the fused representation to a fully connected layer. A Softmax
+head maps the resulting features into seven discrete trading
+actions.
+Action execution is regulated by a strict rule-based
+constraint layer. Strong Buy signals are activated only when
+four conditions jointly hold: EMAT identifies an upward
+trend, HMM confirms a bullish regime, GARCH indicateslow volatility risk, and sentiment is positive. Intermediate
+actions (Hold, Hold–High Risk) enable position maintenance
+under controlled risk, while a dedicated Wait state serves as
+a portfolio protection mechanism under conflicting
+macroeconomic and technical signals. When HMM signals a
+bearish regime combined with volatility exceeding
+predefined thresholds, all buy actions are invalidated and
+automatic Strong Sell and Exit actions are triggered for loss
+mitigation.
+IV. EXPERIMENTS AND DISCUSSION
+A. DatasetandImplementationSetup
+The empirical study utilizes OHLCV series from 2019 to
+2025 for META, GOOGL, and VNM. This technical data is
+synchronized with a customized corpus of 1.53 million
+bilingual financial news items sourced from platforms like
+Benzinga, Zacks, and Vietstock. News items are mapped to
+768-dimensional embeddings via FinBERT. To specifically
+enhance domestic market analysis, 6,563 Vietnamese articles
+were annotated with 11 standardized sentiment attributes to
+fine-tune the qualitative branch.
+Fig. 6. Quantitative analysis and trading signals for META stocks
+B. Aggregation&PreprocessingMechanism
+To prevent signal dilution inherent in simple averaging,
+the system employs a rigorous confidence-weighted mean
+aggregation process. Raw news texts, constrained to 512
+characters, are evaluated through the FinBERT-CNN-
+BiGRU block. The algorithm filters out noise by strictly
+retaining signals with a minimum confidence level of 60%.
+The daily representative sentiment score is then computed by
+averaging these high-confidence probabilities, and a
+differential threshold of 0.20 is applied to assign the final
+aggregated sentiment label for the trading session.
+C. Timeseriesforecastingperformance(Regression
+Performance)
+To assess the ability to track price dynamics, the EMAT
+system was compared with a baseline deep learning model
+(Baseline LSTM). The detailed results in Table 1, visualized
+in Figure 7, demonstrate the overall superiority of the
+proposed architecture.
+
+=== PAGE 4 ===
+Fig. 7. Chart comparing actual and projected stock prices (META,
+GOOGL, VNM) for the period 2020-2025
+TABLE I. P ERFORMANCE EVALUATION AND COMPARISON REPORT
+BETWEEN THE TWO MODELS IN STOCK PRICE FORECASTING
+Stock
+SymbolModel RMSE MAEMAPE
+(%)R²
+Score
+METABaseline
+(LSTM)15.24 10.89 3.42% 0.9927
+EMAT+HMM
++GARCH+
+Sentiment9.5709 6.0873 1.88% 0.9971
+GOOGLEBaseline
+(LSTM)5.12 3.85 2.98% 0.9882
+EMAT+HMM
++GARCH+
+Sentiment2.7975 1.9699 1.54% 0.9965
+VNMBaseline
+(LSTM)2.35 1.62 2.51% 0.9658
+EMAT+HMM
++GARCH+
+Sentiment1.0196 0.7088 1.10% 0.9824
+Specifically, for META, the RMSE error decreased
+sharply by 37.2% (from 15.24 to 9.57), while the MAPE was
+compressed to just 1.88%. The improvement was even more
+impressive for GOOGL and VNM, with MAPE reductions of
+48.3% and 56.2%, respectively, compared to the baseline
+model. The coefficient of determination (R²) remained
+excellent on all three stocks (>0.98), especially approaching
+perfection in META (0.9971). The predicted price trajectory
+smoothly followed the inflection points of the actual price,
+demonstrating that the HMM state variable and the
+multifaceted characteristics of EMAT effectively denoised
+and eliminated the inherent lag of traditional LSTM networks.
+D. AssessingTradingActionClassification
+Not stopping at continuous price forecasting, the system
+further maps the learned representation to the discrete decision
+space. Figure 8 presents the Confusion Matrix for the task of
+classifying trading actions on the test set.Fig. 8. Confusion matrix for classifying trading actions
+Despite the dataset exhibiting inherent imbalances (Hold
+and Exit labels predominate), EMAT demonstrates high
+precision at strategically important decision labels such as
+Buy++ and Sell--. The presence of bold colored squares on
+the main diagonal confirms the decision layer's ability to
+differentiate state boundaries, preventing the system from
+being confused by opposing buy/sell signals.
+E. StatisticalSignificance
+To refute the hypothesis that error optimization is merely
+a random occurrence, the study conducted two rigorous tests:
+the Paired T-Test and the Wilcoxon Signed-Rank Test. Figure
+9 summarizes the p-values obtained from actual transaction
+trigger points.
+Fig. 9. Summary of p-values
+With a significance level of a= 0.05, all test results yield
+p-values approaching 0 (e.g., META T p-value = 1.18 x 10 ⁻⁹,
+GOOGL = 4.46 x 10 ⁻⁹). These indicators provide irrefutable
+statistical evidence, firmly asserting that the increased
+predictive performance and return of the EMAT architecture
+compared to market returns is a natural consequence of its
+deep feature extraction capabilities, entirely independent of
+random chance.
+V. DISCUSSION AND LIMITATIONS
+A. ExplainableAIandDecisionLogic
+Overcoming the neural network "black box" dilemma,
+EMAT's decision layer guarantees strict transparency (Figure
+10). A Strong Buy (Buy++) is exclusively executed when
+technical trends are upward, HMM confirms a bullish state,
+GARCH volatility is low, and sentiment is positive;
+conversely, bearish regimes with high volatility automatically
+trigger Sell/Exit actions to mitigate losses.
+
+=== PAGE 5 ===
+Fig. 10. Simulating a decision-making logic branching tree diagram
+B. TradingPerformanceandMarketSentimentImpact
+The accuracy of the algorithm is directly translated into
+actual profits. As shown in Figure 6, the trading signals
+generated by EMAT (marked with Green/Red arrows) are
+extremely effective, helping to "catch the wave at the right
+time" and "exit positions before the crash". The win rate
+reached 87.18% for META, 82.14% for GOOGL, and 80.0%
+for VNM, with an average profit per Buy++ order ranging
+from 5.05% to 5.85%.
+Fig. 11. Visualize trading signals from the EMAT system on META,
+GOOGL, and VNM stocks
+This success owes a vital contribution to sentiment
+analysis. Figure 12 clearly illustrates the synergy between
+sentiment momentum and price behavior. It can be observed
+that red candlesticks (negative sentiment) often precede or
+accompany price collapses, while green candlesticks
+(positive sentiment) firmly establish recovery rallies. The
+integration of FinBERT has enabled EMAT to "hear" the
+market's pulse, something that OHLCV data alone cannot
+achieve.Fig. 12. Visualizing the dynamic correlation between Sentiment Impulse
+C. ComparisonwithRelatedWorks
+To affirm its practical contribution, Table II benchmarks
+EMAT against six state-of-the-art systems published between
+2024 and 2025, evaluating both continuous value forecasting
+and trading signal classification.
+TABLE II. C OMPARE OTHER MODELS TO EMAT
+Authors
+(Year)MethodModel
+Architect
+ureDatase
+tReport
+ed
+Perfor
+manceEMAT
+Perform
+ance
+Sang &
+Li (2024)
+[29]LSTM
+with
+AttentionLSTM–A
+ttentionS&P
+500MAPE:
+2.50%MAPE:
+1.88%
+Li, Wei
+& Yin
+(2025)
+[30]GAN-
+based
+Forecasti
+ngGAN–LS
+TM–Atte
+ntionAAPL,
+GOOG
+L,
+AMDR²:
+0.9850R²:
+0.9971
+Shobayo
+et al.
+(2024)
+[31]Sentimen
+t-driven
+Regressio
+nFinBERT
++ GPT-4
++ LRS&P
+500Accura
+cy:
+57.4%Accurac
+y:
+87.18%
+ECAI
+Conferen
+ce (2024)
+[32]Hybrid
+Deep
+LearningCNN–Bi
+LSTM–A
+ttentionCSI
+(Mouta
+i)MAPE:
+0.94%
+R²:
+0.958MAPE:
+1.10%
+R²: 0.982
+Sarkar &
+Shahid
+(2025)
+[33]Sentimen
+t-Aware
+LSTMFinBERT
++ LSTMUS
+Tech
+StocksMSE
+gain:
+38%
+vs.
+baselin
+eMAPE:
+1.54%
+Lund
+Universit
+y (2024)
+[34]Transfor
+mer-
+based
+Forecasti
+ngVanilla
+Transfor
+merAAPL,
+GOOG
+L,
+MSFT,
+AMZNMAPE:
+3.18%MAPE:
+1.88%
+As detailed in Table I, EMAT establishes a new
+benchmark. Models relying purely on improved deep
+learning structures, such as LSTM-Attention [29], GAN-
+LSTM-Attention [30], or Vanilla Transformers [34],
+maintain higher error rates or lower variance explanation. By
+integrating multi-stage GARCH and HMM noise filters,
+EMAT compresses the MAPE to 1.88% and achieves a near-
+perfect R² of 0.9971 on US tech stocks, while also
+demonstrating superior trajectory tracking compared to
+CNN-BiLSTM frameworks [32].
+Furthermore, EMAT's superiority is highly evident in
+multimodal fusion. While approaches combining FinBERT
+
+=== PAGE 6 ===
+with GPT-4 [31] or LSTM [33] struggle with action
+classification (yielding only 57.4% accuracy), EMAT’s
+fusion mechanism pushes trading signal precision to 87.18%.
+These results confirm that mechanically combining sentiment
+extraction with sequential networks is insufficient; explicitly
+integrating price dynamics, regime identification, and risk
+estimation into a unified decision-making space is essential
+to eliminate market lag and achieve SOTA performance.
+VI. CONCLUSION
+This study successfully proposes EMAT, a multimodal
+trading agent that transcends the limitations of traditional
+binary financial forecasting. By integrating Transformer-
+based spatio-temporal extraction with HMM regime
+detection, GARCH volatility risk estimation, and FinBERT-
+driven sentiment analysis, the framework rigorously maps
+complex, non-stationary market dynamics into a discrete 7-
+action space. Empirical evaluations confirm that the system
+achieves state-of-the-art predictive accuracy (MAPE 1.88%)
+and highly profitable, explainable trading signals (win rates
+up to 87.18%). Crucially, its rule-based decision layer ensures
+transparent risk hedging, successfully protecting portfolios
+from severe asset drawdowns. Future research will explore
+integrating Reinforcement Learning (RL) agents to enable the
+system to continuously optimize dynamic multi-asset
+portfolios in real-time trading environments.
+REFERENCES
+[1] Ji, Yi; Liew, Alan Wee-Chung; Yang, Lixia, "A Novel Improved
+Particle Swarm Optimization With Long-Short Term Memory Hybrid
+Model for Stock Indices Forecast," IEEE Access, vol. 9, pp. 23660-
+23671, 2021.
+[2] Gourav Kumar, Uday Pratap Singh, Sanjeev Jain, "An adaptive
+particle swarm optimization-based hybrid long short-term memory
+model for stock price time series forecasting," Soft Computing, p.
+12115–12135, 26 8 2022.
+[3] U. M. Sirisha, M. C. Belavagi, G. Attigeri, "Profit prediction using
+ARIMA, SARIMA and LSTM models," IEEEAccess, 2022.
+[4] L. R. Toma, "Exploring the effectiveness of ARIMA and GARCH
+models in stock price forecasting," Informatica Economică, vol. 27,
+2023.
+[5] D. Kumar et al., "Analysis and prediction of stock price using
+hybridization of SARIMA and XGBoost," Proc.IEEEIC3IOT, 2022.
+[6] R. F. Engle, "Autoregressive conditional heteroskedasticity with
+estimates of the variance of United Kingdom inflation,"
+Econometrica, vol. 50, no. 4, p. 987–1007, 1982.
+[7] M. Shafiei Hafshejani, N. Mansouri, "Enhancing stock market
+prediction with LSTM: A review of recent developments and
+comparative analysis," Archives of Computational Methods in
+Engineering, 2025.
+[8] Z. Zeng, R. Kaur, S. Siddagangappa, S. Rahimi, T. Balch, M. Veloso,
+"Financial time series forecasting using CNN and Transformer,"
+Proc.AAAI(Online), 2023.
+[9] E. Lezmi, J. Xu, "Time series forecasting with Transformer models
+and application to asset management," SSRN, 2023.
+[10] K. Olorunnimbe, H. Viktor, "Ensemble of temporal Transformers for
+financial time series," JournalofIntelligentInformationSystems, vol.
+62, p. 1087–1111, 2024.
+[11] Y. Liu, J.-X. Leu, S. Holst, "Stock price movement prediction based
+on Stocktwits investor sentiment using FinBERT and ensemble
+SVM,"eerJComputerScience,, vol. 9, no. 1403, 2023.
+[12] G. Bathla and S. Gupta, "FinBERT and LSTM-based novel model for
+stock price prediction using technical indicators and financial news,"
+International Journal of Economics and Business Research, vol. 28,
+no. 1, p. 1–16, 2024.
+[13] Charalampos M. Liapis et al, "Investigating Deep Stock MarketForecasting with Sentiment Analysis," Department of Mathematics,
+2023.
+[14] Gouwei Sun, Yong Li, "Intraday and Post-Market Investor Sentiment
+for Stock Price Prediction: A Deep Learning Framework with
+Explainability and Quantitative Trading Strategy," Systems, vol. 13,
+no. 5, p. 390, 2025.
+[15] Lezmi Edmond; Xu Jiali, "Time Series Forecasting with Transformer
+Models and Application to Asset Management," SSRN Electronic
+Journal, 2023.
+[16] Kenniy Olorunnimbe, Herna Viktor, "Ensemble of temporal
+Transformers for financial time series," Journal of Intelligent
+InformationSystems, vol. 62, pp. 1087-1111, 2024.
+[17] Diego Vallarino, "An AI-Enhanced Forecasting Framework:
+Integrating LSTM and Transformer-Based Sentiment for Stock Price
+Prediction," JournalofEconomicAnalysis, vol. 4, no. 3, p. 109, 2025.
+[18] Hemanth Kumar S, G Sai Roopesh, Abhijeet Saurabh, Moin Khan,
+"A Comprehensive Survey of Stock Market Prediction Through
+Sentiment Analysis and Machine Learning," InternationalAdvanced
+Research Journal in Science, Engineering and Technology
+(IARJSET), vol. 12, no. 2, 2025.
+[19] Mahan Veisi; Sadra Berangi; Mahdi Shahbazi Khojasteh; Armin
+Salimi-Badr, "A Deep Reinforcement Learning Approach Combining
+Technical and Fundamental Analyses with a Large Language Model
+for Stock Trading," IEEEXplore, 2024.
+[20] MohammadEsmael Heidari Safari, Soodeh Hosseini, "A novel
+framework using particle swarm optimization and long short-term
+memory networks for stock market forecasting," Scientific Reports,
+2025.
+[21] P. C. Tetlock, "Giving content to investor sentiment: The role of
+media in the stock market," The Journal of Finance, vol. 62, pp.
+1139-1168, 2007.
+[22] S. L. Heston and N. R. Sinha, "News versus sentiment: Predicting
+stock returns from news stories," FinancialAnalystsJournal, vol. 73,
+pp. 67-83, 2017.
+[23] Shuozhe Li, Zachary B. Schulwolf, và Risto Miikkulainen,
+"Transformer Based Time-Series Forecasting for Stock," arXiv.
+[24] Y. Chen, W. Shen, H. Liu, and X. Cao, "EMAT: Enhanced Multi-
+Aspect Attention Transformer for Financial Time Series Forecasting,"
+Entropy, vol. 27, p. 1029, 2025.
+[25] Rethyam Gup, Sarthak Kapoor, Himank Gupta, Srinivasan Natesan,
+"A forest of opinions: A multi-model ensemble-HMM voting
+framework for market regime shift detection and trading," AIMSData
+ScienceandFinance, 2025.
+[26] T. Bollerslev, "Generalized autoregressive conditional
+heteroskedasticity," Journal of Econometrics, vol. 31, pp. 307-327,
+1986.
+[27] Adhikari, "Forecasting stock index closing points using ARIMA-
+GARCH with a rolling data window," International Journal of
+ScienceandResearchArchive(IJSRA), 2024.
+[28] Mariam Ghani, "Financial Sentiment Mining with FINBERT in
+Market Prediction and Sentiment Analysis," International Research
+Journal on Advanced Engineering and Management (IRJAEM),
+2025.
+[29] Shuai Sang, Lu Li, "A Novel Variant of LSTM Stock Prediction
+Method Incorporating Attention Mechanism," Mathematics, 2024.
+[30] Peng Li, Yanrui Wei, Lili Yin, "Research on Stock Price Prediction
+Method Based on the GAN-LSTM-Attention Model," Computers,
+Materials&Continua, 2025.
+[31] Olamilekan Shobayo, Sidikat Adeyemi-Longe, Olusogo Popoola,
+Bayode Ogunleye, "Innovative Sentiment Analysis and Prediction of
+Stock Price Using FinBERT, GPT-4 and Logistic Regression: A
+Data-Driven Approach," BigDataandCognitiveComputing, 2024.
+[32] J. Lu, "Hybrid Deep Learning Model for Stock Price Prediction:
+Evidence from Guizhou Moutai Stock," Proceedings of the 1st
+International Conference on E-commerce and Artificial Intelligence
+(ECAI), 2024.
+[33] Sarkar, B., & Shahid, A., "Hybrid FinBERT-LSTM Deep Learning
+Framework for Stock Price Prediction: A Sentiment Analysis
+Approach Using Earnings Call Transcripts," EasyChair Preprint,
+2025.
+
+=== PAGE 7 ===
+[34] Bachelor's Thesis, Lund University, Sweden, "Stock Price Prediction
+Using Transformer on Technology Stocks," Lund University
+Publications, 2024.
+
